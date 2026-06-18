@@ -11,5 +11,5 @@ provider "aws"{
 }
 //creo clase y mi instancia
 resource "aws_s3_bucket" "mi_bucket" {
-    bucket = "var.nombre_bucket" //llamo a mi variable
+    bucket = var.nombre_bucket //llamo a mi variable
 }
