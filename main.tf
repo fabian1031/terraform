@@ -24,8 +24,7 @@ resource "aws_s3_bucket" "mi_bucket" {
 }
 resource "aws_instance" "mi_servidor" {
   ami           = data.aws_ami.amazon_linux.id
-  instance_type = "t2.micro"
-
+  instance_type = "t3.micro"
   tags = {
     Name = "mi-primer-servidor"
   }
