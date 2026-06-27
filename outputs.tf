@@ -1,17 +1,19 @@
 output "nombre_bucket" {
   description = "Nombre del bucket creado"
-  value       = aws_s3_bucket.mi_bucket.bucket
+  value       = module.bucket.nombre_bucket
 }
 
 output "region_bucket" {
   description = "Region donde fue creado el bucket"
-  value       = aws_s3_bucket.mi_bucket.region
+  value       = module.bucket.region_bucket
 }
+
 output "id_servidor" {
   description = "ID de la EC2"
-  value       = aws_instance.mi_servidor.id
+  value       = module.servidor.id_servidor
 }
+
 output "ip_publica_servidor" {
   description = "IP publica de la EC2"
-  value       = aws_instance.mi_servidor.public_ip
+  value       = module.servidor.ip_publica
 }
